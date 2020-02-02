@@ -1,0 +1,5 @@
+1 start the ganache network
+2 deploy the smart contract to network using remix
+3 run python3 dbutility.py
+4 run python3 server.py
+
