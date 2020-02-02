@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="/static/css/main.css" />
+		<title>Reactive Error</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+			rel="stylesheet"
+			id="bootstrap-css"
+		/>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<nav
+			class="navbar navbar-expand-lg  bg-light fixed-top justify-content-end"
+		>
+			<a
+				class="navbar-brand"
+				href="#"
+				style="font-family: 'Bowlby One SC', cursive;"
+				>Reactive Error</a
+			>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div
+				class="collapse navbar-collapse justify-content-end"
+				id="navbarNavAltMarkup"
+			>
+				<div class="navbar-nav">
+					<a class="nav-item nav-link active" href="{{url_for('verification')}}">Scan</a>
+					<a class="nav-item nav-link" href="#">About</a>
+					<a class="nav-item nav-link" href="#">Contact Us</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container login-container">
+			<div class="row">
+				<div class=" col-lg-5 login-form-1">
+					<h3>Login</h3>
+					<form method="POST" action="{{url_for('login')}}">
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Your Email *"
+								value=""
+								name='email'
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="password"
+								class="form-control"
+								placeholder="Your Password *"
+								value=""
+								name='password'
+							/>
+						</div>
+						<div class="form-group">
+							<input type="submit" class="btnSubmit" value="Login" />
+						</div>
+						<div class="form-group">
+							<a href="#" class="ForgetPwd">Forget Password?</a>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-7">
+					<h1
+						style="font-family: 'Raleway', sans-serif; text-align: left; padding-left: 2rem;"
+					>
+						Want to check the authenticity of your product?
+					</h1>
+					<h3
+						style="font-family: 'Raleway', sans-serif; text-align: left; padding-left: 2rem; padding-top: 1rem;"
+					>
+						You are at the right place.
+					</h3>
+					<h3
+						style="font-family: 'Raleway', sans-serif; text-align: left; padding-left: 2rem; padding-top: 1rem;"
+					>
+						<strong>Login</strong> or <strong>Scan QRCode</strong> to trace the
+						path of your drug.
+					</h3>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

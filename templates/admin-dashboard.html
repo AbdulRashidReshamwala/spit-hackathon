@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="/static/css/main.css" />
+		<title>Reactive Error</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+			rel="stylesheet"
+			id="bootstrap-css"
+		/>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<nav
+			class="navbar navbar-expand-lg  bg-light fixed-top justify-content-end"
+		>
+			<a
+				class="navbar-brand"
+				href="#"
+				style="font-family: 'Bowlby One SC', cursive;"
+				>Reactive Error</a
+			>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div
+				class="collapse navbar-collapse justify-content-end"
+				id="navbarNavAltMarkup"
+			>
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="{{url_for('verification')}}">Scan</a>
+					<a class="nav-item nav-link" href="{{url_for('create_node')}}">Create Node</a>
+					<a class="nav-item nav-link" href="{{url_for('create_batch')}}">Create Batch</a>
+					<a class="nav-item nav-link" href="{{url_for('logout')}}">Logout</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container login-container">
+			<div id="admin-part" class=" login-form-1">
+				<h3>Admin</h3>
+
+				{% for node in nodes%}
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">{{node[2]}}</h4>
+								<p class="card-text">
+									{{node[4]}}
+								</p>
+								<a href="/node/{{node[4]}}" class="btn btn-success"
+									>View Node</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>

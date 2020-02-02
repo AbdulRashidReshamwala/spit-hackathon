@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="/static/css/main.css" />
+		<title>Reactive Error</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+			rel="stylesheet"
+			id="bootstrap-css"
+		/>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<nav
+			class="navbar navbar-expand-lg  bg-light fixed-top justify-content-end"
+		>
+			<a
+				class="navbar-brand"
+				href="#"
+				style="font-family: 'Bowlby One SC', cursive;"
+				>Reactive Error</a
+			>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div
+				class="collapse navbar-collapse justify-content-end"
+				id="navbarNavAltMarkup"
+			>
+				<div class="navbar-nav">
+						<a class="nav-item nav-link" href="{{url_for('create_node')}}">Create Node</a>
+						<a class="nav-item nav-link" href="{{url_for('create_batch')}}">Create Batch</a>
+						<a class="nav-item nav-link" href="{{url_for('logout')}}">Logout</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container login-container">
+			<div id="single-2" class=" login-form-2">
+				<form action="{{url_for('create_node')}}" method="POST">
+					<h3 id="sp">Create Node</h3>
+					<br />
+					<label><b>Name</b></label>
+					<input
+						class="form-control"
+						type="text"
+						placeholder="Enter Name"
+						name="name"
+						required
+					/>
+
+					<label><b>Level</b></label>
+					<input
+						class="form-control"
+						type="text"
+						placeholder="Enter Level"
+						name="level"
+						required
+					/>
+
+					<label><b>Latitude</b></label>
+					<input
+						class="form-control"
+						type="text"
+						placeholder="Enter Latitude"
+						name="lat"
+						required
+					/>
+
+					<label><b>Longitude</b></label>
+					<input
+						class="form-control"
+						type="text"
+						placeholder="Enter Longitude"
+						name="lon"
+						required
+					/>
+
+					<label><b>Email</b></label>
+					<input
+						class="form-control"
+						type="text"
+						placeholder="Enter Email"
+						name="email"
+						required
+					/>
+
+					<label><b>Password</b></label>
+					<input
+						class="form-control"
+						type="password"
+						placeholder="Enter Password"
+						name="password"
+						required
+					/>
+
+					<div class="clearfix" id="but">
+						<button type="submit" class="btn btn-success">Create Node</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
